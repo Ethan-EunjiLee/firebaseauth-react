@@ -7,6 +7,7 @@ class updateUser extends React.Component{ //eslint-disable-next-line
    
     componentDidMount(){
       
+        // TODO arrow =>
         firebase.auth().onAuthStateChanged(function(user){
             if(user){
                 console.log('yes user: ', user);
