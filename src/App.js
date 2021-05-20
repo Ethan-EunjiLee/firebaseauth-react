@@ -1,5 +1,5 @@
 
-import React, { Component } from "react"
+import React from "react"
 import { BrowserRouter, Route } from "react-router-dom"
 import firebaseSignup from "./routes/firebaseSingup"
 import insertNotice from "./routes/insertNotice";

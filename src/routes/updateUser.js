@@ -1,7 +1,8 @@
-import React, { Component } from "react"
+import React from "react"
 import firebase from 'firebase/app';
 import "firebase/auth"
  
+// TODO: 파스칼
 class updateUser extends React.Component{ //eslint-disable-next-line
    
     componentDidMount(){

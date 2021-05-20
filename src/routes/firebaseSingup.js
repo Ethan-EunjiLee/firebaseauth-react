@@ -1,9 +1,10 @@
-import React, { Component } from "react"
+import React from "react"
 import firebase from 'firebase/app';
-import * as serviceAccount from "../config/firebaseServiceAccount.json"
 import "firebase/auth"
- 
+
 class firebaseSignup extends React.Component{ //eslint-disable-next-line
+
+    //TODO constructor super 
 
     onClickButton(){
         console.log('버튼 클릭');
@@ -14,14 +15,18 @@ class firebaseSignup extends React.Component{ //eslint-disable-next-line
 
         console.log(email, id, pw);
 
+        // TODO: 로그인 전 DB 유저 확인
         firebase.auth().createUserWithEmailAndPassword(email, pw)
             .then((userCredential) => {
                 var user = userCredential.user;
                 console.log('user: ', user);
+                // TODO: onAuthStateChanged 구현
             })
             .catch((err) => {
                 console.log('err: ', err);
             })
+            
+        // TODO: 리다이렉트 simplogis
     }
 
     render(){
